@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Array Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 8px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 400px; margin: 20px auto; padding: 20px;">
+        <h1>Simple Array Calculator</h1>
+        <div>
+            <label for="arrayInput">Enter integers (comma separated):</label>
+            <input type="text" id="arrayInput" value="1,2,3,4,5">
+            <p>Example: 2,4,6,8 or 10,20,30</p>
+        </div>
+
+        <button id="calculateBtn">Calculate</button>
+
+        <div id="results" style="display: block; margin-top: 20px;">
+            <p>Sum: <span id="sumResult">0</span></p>
+            <p>Product: <span id="productResult">0</span></p>
+            <p>Input: <span id="inputArray"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            // Get input value and parse it into an array of numbers
+            const input = document.getElementById('arrayInput').value;
+            const numbers = input.split(',')
+                                .map(num => num.trim())
+                                .filter(num => num !== '')
+                                .map(num => {
+                                    const parsed = parseInt(num, 10);
+                                    if (isNaN(parsed)) {
+                                        alert(`"${num}" is not a valid number. Please enter only integers separated by commas.`);
+                                        throw new Error('Invalid input');
+                                    }
+                                    return parsed;
+                                });
+
+            if (numbers.length === 0) {
+                alert('Please enter at least one number');
+                return;
+            }
+
+            // Calculate sum and product
+            const result = calculateSumAndProduct(numbers);
+            
+            // Display results
+            document.getElementById('sumResult').textContent = result.sum;
+            document.getElementById('productResult').textContent = result.product;
+            document.getElementById('inputArray').textContent = `[${numbers.join(', ')}]`;
+            
+            // Show results section
+            document.getElementById('results').style.display = 'block';
+        });
+
+        function calculateSumAndProduct(arr) {
+            let sum = 0;
+            let product = 1;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+                product *= arr[i];
+            }
+
+            return {
+                sum: sum,
+                product: product
+            };
+        }
+    </script>
+</body>
+</html>
+
+

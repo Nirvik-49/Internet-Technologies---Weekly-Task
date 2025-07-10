@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risa International ipsum Lorem</title>
+    <style>
+        /* Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .navigation {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .search-box {
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .search-box:hover {
+            background-color: #f5f5f5;
+        }
+
+        .header-contact-bottom {
+            text-align: right;
+            padding: 10px 20px;
+            font-size: 12px;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Main Content Styles */
+        .main {
+            padding: 40px 0;
+            min-height: 60vh;
+        }
+
+        .clients-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #333;
+            font-style: italic;
+        }
+
+        .section-title-no-italic {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #333;
+            font-style: normal;
+        }
+
+        /* Client Grid Styles */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .client-card {
+            background-color: #f8f8f8;
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .client-logo {
+            flex-shrink: 0;
+        }
+
+        .client-info {
+            flex-grow: 1;
+        }
+
+        .client-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .client-position {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 15px 0;
+        }
+
+        .client-description {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #f8f8f8;
+            border-top: 1px solid #e0e0e0;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .footer-menu {
+            list-style: none;
+        }
+
+        .footer-menu li {
+            margin-bottom: 8px;
+        }
+
+        .footer-menu a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-menu a:hover {
+            color: #333;
+        }
+
+        .testimonial-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-text-no-italic {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: normal;
+        }
+
+        .testimonial-author {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .contact-info {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .red-text {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .clients-grid {
+                gap: 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .navigation {
+                order: 2;
+            }
+            
+            .search-box {
+                order: 3;
+            }
+            
+            .header-contact-bottom {
+                text-align: center;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .clients-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .client-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .map-placeholder {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .main {
+                padding: 20px 0;
+            }
+            
+            .client-card {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .nav-menu {
+                gap: 10px;
+            }
+            
+            .nav-link {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Additional hover effects and animations */
+        .client-card .client-logo svg {
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover .client-logo svg {
+            transform: scale(1.05);
+        }
+
+        .footer-menu a,
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        .footer-menu a:hover::before {
+            width: 100%;
+        }
+
+        /* Print styles */
+        
+        @media print {
+            .header,
+            .footer {
+                display: none;
+            }
+            
+            .main {
+                padding: 0;
+            }
+            
+            .client-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="50" height="30" stroke="#333" stroke-width="2" fill="none"/>
+                            <text x="30" y="25" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Logo</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <nav class="navigation">
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About Us</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#clients" class="nav-link active">Who We Work With</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="9" r="7" stroke="#666" stroke-width="2"/>
+                        <path d="m17 17-4.35-4.35" stroke="#666" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="header-contact-bottom">
+                <p>Calle de la Ópera 20, 28013, Madrid. Tel. # 756</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <section class="clients-section">
+                <h1 class="section-title-no-italic">Who We Work With</h1>
+                
+                <div class="clients-grid">
+                    <!-- Client Card 1 -->
+
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="5" width="110" height="70" stroke="#666" stroke-width="1" fill="none"/>
+                                <text x="60" y="45" text-anchor="middle" fill="#666" font-size="12">Company Logo</text>
+                            </svg>
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Coca Cola</h3>
+                            <p class="client-position">Steve Jobs - CEO</p>
+                            <hr class="divider">
+                            <p class="client-description">
+                                Working with Risa. Nullam sit dolor sit nihil, 
+                                ultrices vehicula ut et elit. Donec et elit non 
+                                mi porta gravida et eget metus. Maecenas 
+                                posuere mollis diceiam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Client Card 2 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="5" width="110" height="70" stroke="#666" stroke-width="1" fill="none"/>
+                                <text x="60" y="45" text-anchor="middle" fill="#666" font-size="12">Company Logo</text>
+                            </svg>
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Coca Cola</h3>
+                            <p class="client-position">Steve Jobs - CEO</p>
+                            <hr class="divider">
+                            <p class="client-description">
+                                Working with Risa. Nullam sit dolor sit nihil, 
+                                ultrices vehicula ut et elit. Donec et elit non 
+                                mi porta gravida et eget metus. Maecenas 
+                                posuere mollis diceiam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Client Card 3 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="5" width="110" height="70" stroke="#666" stroke-width="1" fill="none"/>
+                                <text x="60" y="45" text-anchor="middle" fill="#666" font-size="12">Company Logo</text>
+                            </svg>
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Coca Cola</h3>
+                            <p class="client-position">Steve Jobs - CEO</p>
+                            <hr class="divider">
+                            <p class="client-description">
+                                Working with Risa. Nullam sit dolor sit nihil, 
+                                ultrices vehicula ut et elit. Donec et elit non 
+                                mi porta gravida et eget metus. Maecenas 
+                                posuere mollis diceiam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Client Card 4 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="5" width="110" height="70" stroke="#666" stroke-width="1" fill="none"/>
+                                <text x="60" y="45" text-anchor="middle" fill="#666" font-size="12">Company Logo</text>
+                            </svg>
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Coca Cola</h3>
+                            <p class="client-position">Steve Jobs - CEO</p>
+                            <hr class="divider">
+                            <p class="client-description">
+                                Working with Risa. Nullam sit dolor sit nihil, 
+                                ultrices vehicula ut et elit. Donec et elit non 
+                                mi porta gravida et eget metus. Maecenas 
+                                posuere mollis diceiam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Site Map -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Site Map</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#clients">Who We Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Client Testimonials -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Client Testimonials</h4>
+                    <div class="testimonial">
+                        <p class="testimonial-text-no-italic">
+                            "Our clients, sit non commodo lacus, 
+                            our mollitie ipsum, eget lacerat 
+                            also in elit. Donec at elecon tium."
+                        </p>
+                        <p class="testimonial-author">
+                            <strong>Steve Jobs,</strong><br>
+                            CEO Winstar Foods
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Google Map Placeholder -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Google Map</h4>
+                    <div class="map-placeholder">
+                        <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="150" fill="#f0f0f0" stroke="#ccc"/>
+                            <line x1="0" y1="0" x2="200" y2="150" stroke="#ccc"/>
+                            <line x1="200" y1="0" x2="0" y2="150" stroke="#ccc"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Where are we?</h4>
+                    <div class="contact-info">
+                        <p>Calle de la Ópera 20,<br>
+                        28013<br>
+                        Madrid<br>
+                        Tel. # 756<br>
+                        Mobile +34<br> 
+                        info@a<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

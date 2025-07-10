@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: hsl(60, 100%, 50%);;
+        }
+
+        .container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Table Reproduction Styles */
+        .table-reproduction {
+            display: grid;
+            grid-template-columns: 200px 150px 150px;
+            grid-template-rows: 50px 45px 155px;
+            gap: 2px;
+            background-color: hsl(50, 100%, 95%); /* Very light yellow/cream */
+            padding: 2px;
+            width: fit-content;
+            margin: 0 auto;
+            outline: 1px solid hsl(0, 0%, 0%); /* Very thin black outer border */
+        }
+
+        .cell {
+            border: 1px solid hsl(0, 0%, 0%); /* Black borders around each cell */
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .header-cell {
+            background-color: hsl(0, 0%, 100%); /* White background */
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column1-header {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .column2-header {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .column3-header {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .col1-full {
+            grid-column: 1;
+            grid-row: 2 / 4;
+            background-color: hsl(208, 100%, 85%); /* Light blue */
+        }
+
+        .col2-top {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: hsl(60, 100%, 50%); /* Yellow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .col3-top {
+            grid-column: 3;
+            grid-row: 2;
+            background-color: hsl(0, 100%, 50%); /* Red */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .bottom-span {
+            grid-column: 2 / 4;
+            grid-row: 3;
+            background-color: hsl(120, 100%, 25%); /* Green */
+            color: hsl(0, 0%, 0%); /* Black text */
+        }
+
+        .numbered-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .numbered-list li {
+            margin-bottom: 2px;
+        }
+
+        .unnumbered-list {
+            margin: 0;
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .unnumbered-list li {
+            margin-bottom: 1px;
+        }
+
+        .footer-info {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Table</h1>
+        <p class="description">Created using CSS positioning instead of HTML tables</p>
+    </div>
+
+    <!-- Table Container with CSS Grid -->
+    <div class="table-reproduction">
+        <!-- Header Row -->
+        <div class="cell header-cell column1-header">
+            Column 1
+        </div>
+        <div class="cell header-cell column2-header">
+            Column 2
+        </div>
+        <div class="cell header-cell column3-header">
+            Column 3
+        </div>
+        
+        <!-- Column 1 Content (spans 2 rows) -->
+        <div class="cell col1-full">
+            <div style="font-weight: bold; margin-bottom: 8px;">A numbered list:</div>
+            <ol class="numbered-list">
+                <li>Able</li>
+                <li>Baker</li>
+                <li>Charlie</li>
+                <li>Delta</li>
+                <li>Echo</li>
+            </ol>
+        </div>
+        
+        <!-- Column 2 Top -->
+        <div class="cell col2-top">
+            B
+        </div>
+        
+        <!-- Column 3 Top -->
+        <div class="cell col3-top">
+            C
+        </div>
+        
+        <!-- Bottom Section (spans columns 2 and 3) -->
+        <div class="cell bottom-span">
+            <div style="font-weight: bold; margin-bottom: 8px;">An unnumbered list:</div>
+            <ul class="unnumbered-list">
+                <li>• Pounds</li>
+                <li>• Dollars</li>
+                <li>• Euro</li>
+                <li>• Yen</li>
+                <li>• Roubles</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-info">
+    </div>
+</body>
+</html>

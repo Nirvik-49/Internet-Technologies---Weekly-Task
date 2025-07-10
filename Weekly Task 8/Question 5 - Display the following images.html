@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1>Image Gallery Display</h1>
+    
+    <script>
+        // Display images using for loop
+        document.write('<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">');
+        
+        for (let i = 1; i <= 4; i++) {
+            document.write(`
+                <div style="text-align: center;">
+                    <img src="${i}.jpg" alt="Image ${i}" style="width: 250px; height: 200px;">
+                    <p>Image: ${i}.jpg</p>
+                </div>
+            `);
+        }
+        
+        document.write('</div>');
+    </script>
+</body>
+</html>

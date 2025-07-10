@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Join Example</title>
+</head>
+<body>
+    <h1>Array Join Example</h1>
+    <p>Original array: ["Red", "Green", "White", "Black"]</p>
+    
+    <button onclick="displayToString()">toString()</button>
+    <button onclick="displayJoin()">join()</button>
+    <button onclick="displayJoinPlus()">join('+')</button>
+    
+    <div id="output"></div>
+
+    <script>
+        const myColor = ["Red", "Green", "White", "Black"];
+
+        function displayToString() {
+            document.getElementById('output').textContent = myColor.toString();
+        }
+
+        function displayJoin() {
+            document.getElementById('output').textContent = myColor.join();
+        }
+
+        function displayJoinPlus() {
+            document.getElementById('output').textContent = myColor.join('+');
+        }
+
+        // Initialize with the toString method
+        displayToString();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Input</title>
+</head>
+<body>
+    <h1>Student Grade Calculator</h1>
+    
+    <script>
+        // Prompt for marks input
+
+        const marks = parseFloat(prompt("Please enter your marks (0-100):"));
+        
+        // Determine grade using if...else if ladder
+
+        let grade;
+        
+        if (marks >= 80 && marks <= 100) {
+            grade = "Distinction";
+        } else if (marks >= 60 && marks < 80) {
+            grade = "First Division";
+        } else if (marks >= 50 && marks < 60) {
+            grade = "Second Division";
+        } else if (marks >= 40 && marks < 50) {
+            grade = "Third Division";
+        } else if (marks < 40) {
+            grade = "Fail";
+        } else {
+            grade = "Invalid marks entered";
+        }
+        
+        // Display result
+
+        alert(`Your Grade: ${grade}`);
+        document.write('<h2>Grade Result</h2>');
+        document.write(`<p>Marks obtained: ${marks}</p>`);
+        document.write(`<p>Grade: ${grade}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Day Using Switch Case</title>
+</head>
+<body>
+    <h1>Day Finder</h1>
+    
+    <script>
+
+        // Prompt for day number input
+        const dayNumber = parseInt(prompt("Please enter a day number (1-7):"));
+        let dayName;
+        
+        // Determine day name using switch case
+        switch(dayNumber) {
+            case 1:
+                dayName = "Sunday";
+                break;
+            case 2:
+                dayName = "Monday";
+                break;
+            case 3:
+                dayName = "Tuesday";
+                break;
+            case 4:
+                dayName = "Wednesday";
+                break;
+            case 5:
+                dayName = "Thursday";
+                break;
+            case 6:
+                dayName = "Friday";
+                break;
+            case 7:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid day number";   
+        }
+        
+        // Display result
+        alert(`Day ${dayNumber} is: ${dayName}`);
+        document.write('<h2>Show the Result</h2>');
+        document.write(`<p>Number entered: ${dayNumber}</p>`);
+        document.write(`<p>Day: ${dayName}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Management</title>
+     <h1>Rectangle Area Calculator</h1>
+    <script>
+        // Global variables
+        var array = []; // Defining the array
+        var x = 0; // Index variable
+
+        function add_item_to_array() {
+            // Get the value from the text input
+            var value = document.getElementById("text1").value;
+            
+            // Add the value to the array
+            array[x] = value;
+            alert("Element: " + array[x] + " Added at index " + x);
+            x++; // Increment the index
+            
+            // Clear the input field
+            document.getElementById("text1").value = "";
+        }
+
+        function display_array() {
+            var e = "<hr/>";
+            for (var y = 0; y < array.length; y++) {
+                e += "Element " + y + " = " + array[y] + "<br/>";
+            }
+            // Display the result
+            document.getElementById("Result").innerHTML = e;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1" />
+    <input type="button" id="button1" value="Add" onclick="add_item_to_array();" />
+    <input type="button" id="button2" value="Display" onclick="display_array();" />
+    <div id="Result"></div>
+</body>
+</html>

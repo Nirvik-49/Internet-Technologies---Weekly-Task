@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Form</title>
+</head>
+<body>
+    <div style="border: 1px solid black; padding: 20px; width: 300px;">
+        <center><h1 style="border-bottom: 2px solid black; padding-bottom: 10px;">Search our web site!</h1></center>
+        
+        <form>
+            <p>Where do you want to search?</p>
+            <label><input type="radio" name="search-option" value="whole-site"> Whole site</label><br>
+            <label><input type="radio" name="search-option" value="business-partners"> Business Partners Section</label><br>
+            <label><input type="radio" name="search-option" value="corporate-communications"> Corporate Communications Section</label><br>
+            <label><input type="radio" name="search-option" value="lotus-education"> Lotus Education Section</label><br><br>
+
+            <label for="search-term">Enter a word or two that we can search on:</label><br>
+            <input type="text" id="search-term" name="search-term"><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+</body>
+</html>
